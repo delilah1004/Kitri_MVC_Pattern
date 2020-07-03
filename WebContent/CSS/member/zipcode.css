@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/**
+ * @날짜 : 2020.07.03
+ * @author : 이다은
+ */
+
+a {
+	text-decoration: underline;
+	color: #0B50AC;
+	font-size: 0.9em;
+}
+
+#address {
+	width: 450px;
+	
+	margin: 5px auto;
+}
