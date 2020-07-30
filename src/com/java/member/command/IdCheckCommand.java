@@ -27,5 +27,4 @@ public class IdCheckCommand implements Command {
 		
 		return "/WEB-INF/Views/member/idCheck.jsp";
 	}
-	
 }

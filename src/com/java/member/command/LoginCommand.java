@@ -17,5 +17,4 @@ public class LoginCommand implements Command {
 		
 		return "/WEB-INF/Views/member/login.jsp";
 	}
-
 }

@@ -13,8 +13,8 @@
 
 <html>
 <head>
-<meta charset="UTF-8">
-<title>아이디 중복 체크 페이지</title>
+	<meta charset="UTF-8">
+	<title>아이디 중복 체크</title>
 </head>
 <body>
 

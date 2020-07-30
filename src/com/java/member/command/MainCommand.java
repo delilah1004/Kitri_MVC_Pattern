@@ -15,9 +15,6 @@ public class MainCommand implements Command {
 	@Override
 	public String proRequest(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		
-		
-		
 		return "/WEB-INF/Views/member/main.jsp";
 	}
-
 }

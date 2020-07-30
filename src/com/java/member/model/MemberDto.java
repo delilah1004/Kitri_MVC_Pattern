@@ -6,6 +6,7 @@ import java.util.Date;
  * @날짜 : 2020. 7. 2.
  * @author: 이다은
  */
+
 public class MemberDto {
 
 	private int num; // DB에서 시퀀스 처리 .nextval

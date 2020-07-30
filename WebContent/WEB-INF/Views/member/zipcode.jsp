@@ -65,5 +65,9 @@
 		
 	</div>
 	
+	<div align="center">
+		<a href="javascript:self.close()">닫기</a>
+	</div>
+	
 </body>
 </html>

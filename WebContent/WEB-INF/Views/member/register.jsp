@@ -15,7 +15,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>회원가입 페이지</title>
+	<title>회원가입</title>
 	<link rel="stylesheet" href="../CSS/member/register.css">
 	<script type="text/javascript" src="${root}/Javascript/member/register.js"></script>
 </head>
@@ -74,7 +74,7 @@
 					<label class="index">주민번호</label>
 					<span class="one"> *
 						<input class="jumin" type="text" name="jumin1" />-
-						<input class="jumin" type="text" name="jumin2" />
+						<input class="jumin" type="password" name="jumin2" />
 					</span>
 				</div>
 				

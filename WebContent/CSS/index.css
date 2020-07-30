@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+div {
+	margin: 10px auto;
+}
+
+a {
+	text-decoration: none;
+	
+	margin: 10px;
+	
+	color: black;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
+}

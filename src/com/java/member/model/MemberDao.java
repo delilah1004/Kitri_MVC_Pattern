@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 
 import com.java.database.ConnectionProvider;
 import com.java.database.JdbcUtil;
@@ -175,6 +176,122 @@ public class MemberDao { // Data Access Object
 			JdbcUtil.close(conn);
 			JdbcUtil.close(pstmt);
 			JdbcUtil.close(rs);
+		}
+
+		return value;
+	}
+	
+	public MemberDto findMember(String id) {
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		MemberDto value = null;
+
+		try {
+
+			String sql = "select * from member where id = ?";
+			conn = ConnectionProvider.getConnection();
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setString(1, id);
+
+			rs = pstmt.executeQuery();
+
+			if(rs.next()) {
+				value = new MemberDto();
+				value.setNum(rs.getInt("num"));
+				value.setId(rs.getString("id"));
+				value.setPassword(rs.getString("password"));
+				value.setName(rs.getString("name"));
+				value.setJumin1(rs.getString("jumin1"));
+				value.setJumin2(rs.getString("jumin2"));
+				
+				value.setEmail(rs.getString("email"));
+				value.setZipcode(rs.getString("zipcode"));
+				value.setAddress(rs.getString("address"));
+				value.setJob(rs.getString("job"));
+				value.setMailing(rs.getString("mailing"));
+				value.setInterest(rs.getString("interest"));
+				value.setMemberLevel(rs.getString("member_level"));
+				
+				value.setRegisterDate(new Date(rs.getTimestamp("register_date").getTime()));
+			}
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+		} finally {
+			JdbcUtil.close(conn);
+			JdbcUtil.close(pstmt);
+			JdbcUtil.close(rs);
+		}
+
+		return value;
+	}
+	
+	public int update(MemberDto dto) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		int value = 0;
+
+		try {
+
+			String sql = "update member set password=?, email=?, zipcode=?, address=?, job=?, mailing=?, interest=? where id = ?";
+			conn = ConnectionProvider.getConnection();
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setString(1, dto.getPassword());
+			pstmt.setString(2, dto.getEmail());
+			pstmt.setString(3, dto.getZipcode());
+			pstmt.setString(4, dto.getAddress());
+			pstmt.setString(5, dto.getJob());
+			pstmt.setString(6, dto.getMailing());
+			pstmt.setString(7, dto.getInterest());
+			pstmt.setString(8, dto.getId());
+			
+			value = pstmt.executeUpdate();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+		} finally {
+			JdbcUtil.close(conn);
+			JdbcUtil.close(pstmt);
+			JdbcUtil.close(rs);
+		}
+
+		return value;
+	}
+	
+	public int delete(String id, String password) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int value = 0;
+
+		try {
+
+			String sql = "delete from member where id=? and password=?";
+			conn = ConnectionProvider.getConnection();
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setString(1, id);
+			pstmt.setString(2, password);
+			
+			value = pstmt.executeUpdate();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+		} finally {
+			JdbcUtil.close(conn);
+			JdbcUtil.close(pstmt);
 		}
 
 		return value;

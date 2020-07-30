@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+/**
+ * @날짜 : 2020.07.09
+ * @author : 이다은
+ */
+
+/* 전체 박스 */
+#board {
+	width: 600px;
+
+	margin: 100px auto;
+}
+
+/* 글 번호 */
+#board .num {
+	float: left;
+
+	margin-bottom: 10px;
+}
+
+
+/* 조회수 */
+#board .count {
+	float: right;
+
+	margin-bottom: 10px;
+}
+
+
+/* 전체 테두리 */
+#board #createform {
+	clear: both;
+
+	border: solid black 3px;
+} 
+
+/* 작성자, 제목, 작성일 row */
+#createform > .tuple {
+	height: 36px;
+	line-height: 36px;
+
+	border: solid black 3px;
+	border-style: none none solid none;
+}
+
+/* 내용 row */
+#createform > .content {
+	height: 313px;
+}
+
+/* 파일 row */
+#createform > .file {
+	height: 36px;
+	line-height: 36px;
+	
+	border: solid black 3px;
+	border-style: solid none none none;
+}
+
+/* tuple index 세로 구분선 */
+#createform > .tuple > .index {
+	width: 120px;
+	height: 36px;
+	
+	display: block;
+	float: left;
+	
+	text-align: center;
+
+	border: solid black 3px;
+	border-style: none solid none none;
+}
+
+/* tuple content */
+#createform > .tuple > .content {
+	height: 23px;
+	vertical-align: center;
+	
+	display: block;
+	float: left;
+
+	margin-left: 5px;
+}
+
+/* 내용 index 세로 구분선 */
+#createform > .content > .index {
+	width: 120px;
+	height: 313px;
+	line-height: 313px;
+	
+	display: block;
+	float: left;
+	
+	text-align: center;
+
+	border: solid black 3px;
+	border-style: none solid none none;
+}
+
+/* 내용 content */
+#createform > .content > .content {
+	width: 400px;
+	height: 300px;
+
+	display: block;
+	float: left;
+
+	margin: 5px;
+}
+
+/* file index 세로 구분선 */
+#createform > .file > .index {
+	width: 120px;
+	height: 36px;
+	
+	display: block;
+	float: left;
+	
+	text-align: center;
+
+	border: solid black 3px;
+	border-style: none solid none none;
+}
+
+/* file content */
+#createform > .file > .content {
+	height: 23px;
+	vertical-align: center;
+	
+	display: block;
+	float: left;
+
+	margin-left: 5px;
+}
+
+
+/* foot : 버튼 */
+#board .foot {
+	height: 50px;
+	line-height: 50px;
+
+	text-align: center;
+}
+
+#board .foot > input {
+	margin: 5px;
+}

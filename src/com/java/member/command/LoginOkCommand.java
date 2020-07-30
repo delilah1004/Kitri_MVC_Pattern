@@ -22,16 +22,15 @@ public class LoginOkCommand implements Command {
 		
 		String[] info = MemberDao.getInstance().loginCheck(id, password);
 		
-		String memberLevel = info[0];
-		logger.info(logMsg + memberLevel);
-		
+		String memberLevel = info[0];		
 		String name = info[1];
-		logger.info(logMsg + memberLevel);
 		
-		request.setAttribute("memberLevel", memberLevel);
+		logger.info(logMsg + " " + memberLevel + " " + name);
+		
+		request.setAttribute("id", id);
 		request.setAttribute("name", name);
+		request.setAttribute("memberLevel", memberLevel);
 		
 		return "/WEB-INF/Views/member/loginOk.jsp";
 	}
-
 }

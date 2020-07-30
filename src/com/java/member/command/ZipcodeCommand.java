@@ -31,5 +31,4 @@ public class ZipcodeCommand implements Command {
 		
 		return "/WEB-INF/Views/member/zipcode.jsp";
 	}
-	
 }

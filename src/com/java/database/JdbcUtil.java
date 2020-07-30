@@ -9,6 +9,15 @@ import java.sql.SQLException;
  * @날짜 : 2020. 7. 1.
  * @author: 이다은
  */
+
+/**
+ * @날짜 : 2020. 7. 8.
+ * @author: 이다은
+ * 
+ * rollback
+ */
+
+
 public class JdbcUtil {
 	public static void close(Connection conn) {
 		if(conn!=null) {
@@ -35,6 +44,16 @@ public class JdbcUtil {
 			try {
 				rs.close();
 			}catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static void rollback(Connection conn) {
+		if(conn!=null) {
+			try {
+				conn.rollback();
+			} catch(Exception e) {
 				e.printStackTrace();
 			}
 		}

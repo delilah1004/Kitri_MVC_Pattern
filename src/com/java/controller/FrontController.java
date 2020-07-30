@@ -24,10 +24,10 @@ import com.java.command.Command;
  */
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private HashMap<String, Object> commandMap = new HashMap<String, Object>();
+	
 	public static final Logger logger = Logger.getLogger(FrontController.class.getName());
 	public static final String logMsg = "logMsg ===== ";
-	
-	public HashMap<String, Object> commandMap = new HashMap<String, Object>();
 	
     public FrontController() {
         super();

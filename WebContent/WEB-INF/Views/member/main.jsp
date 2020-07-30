@@ -13,8 +13,8 @@
 
 <html>
 <head>
-<meta charset="UTF-8">
-<title>메인 홈페이지</title>
+	<meta charset="UTF-8">
+	<title>메인 홈페이지</title>
 </head>
 <body>
 

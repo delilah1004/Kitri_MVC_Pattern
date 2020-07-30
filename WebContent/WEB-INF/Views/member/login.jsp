@@ -16,7 +16,6 @@
 	<meta charset="UTF-8">
 	<title>로그인</title>
 	<link rel="stylesheet" href="../CSS/member/login.css">
-	<script type="text/javascript" src="${root}/Javascript/member/login.js"></script>
 </head>
 <body>
 	

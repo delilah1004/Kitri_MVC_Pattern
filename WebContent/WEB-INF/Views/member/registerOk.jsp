@@ -13,8 +13,8 @@
 
 <html>
 <head>
-<meta charset="UTF-8">
-<title>회원가입 확인 페이지</title>
+	<meta charset="UTF-8">
+	<title>회원가입 확인</title>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
 	<c:if test = "${check > 0}">
 		<script type = "text/javascript">
 			alert("회원가입이 완료되었습니다.");
-			location.href = "${root}/member/register.do";
+			location.href = "${root}/member/login.do";
 		</script>
 	</c:if>
 	

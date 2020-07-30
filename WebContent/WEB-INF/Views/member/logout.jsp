@@ -14,7 +14,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>로그아웃</title>
 	<link rel="stylesheet" href="../CSS/member/login.css">
 	<script type="text/javascript" src="${root}/Javascript/member/login.js"></script>
 </head>
